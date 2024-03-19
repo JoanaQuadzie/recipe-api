@@ -21,3 +21,6 @@ await mongoose.connect(process.env.MONGO_URL);
 app.listen(PORT, () => {
     console.log(`express is running on ${PORT}`)
 });
+
+
+// listen appears at the bottom always
