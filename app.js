@@ -2,16 +2,26 @@ import express from "express";
 import recipesRoutes from "./routes/recipes.routes.js";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
+import cors from "cors";
+
+
+
+// load env variables - this should always be the first to be called
+dotenv.config()
 
 
 const app = express();
 
-dotenv.config()
 const PORT = process.env.PORT
+
+// Apply middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true}));
+app.use(cors())
 
 
 // Use routes
-app.use(recipesRoutes);
+app.use('/recipes', recipesRoutes);
 
 
 // make database connection using mongoose

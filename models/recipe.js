@@ -7,4 +7,4 @@ const recipeSchema = new Schema({
     country: {type: String}
 });
 
-export default model("Recipe", recipeSchema, "recipes");
+export const RecipeModel = model('Recipe', recipeSchema, 'recipes');
