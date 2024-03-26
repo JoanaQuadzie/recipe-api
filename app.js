@@ -17,7 +17,8 @@ const PORT = process.env.PORT
 // Apply middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true}));
-app.use(cors())
+app.use(cors());
+app.use(express.static('uploads'));
 
 
 // Use routes
