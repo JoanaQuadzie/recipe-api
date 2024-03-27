@@ -7,7 +7,7 @@ import cors from "cors";
 
 
 // load env variables - this should always be the first to be called
-dotenv.config()
+dotenv.config();
 
 
 const app = express();
